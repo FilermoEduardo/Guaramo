@@ -1,0 +1,183 @@
+{
+  "organization": {
+    "name": "Guaramo Arte do Mundo",
+    "shortName": "Guaramo",
+    "highlight": "Arte",
+    "initial": "G",
+    "slogan": "Conectamos culturas, transformamos encontros.",
+    "description": "Acolhemos migrantes, refugiados e a comunidade com assistência social e o poder transformador da arte. Aqui, cada história encontra um novo caminho."
+  },
+  "navigation": {
+    "links": [
+      { "href": "#inicio", "label": "Início" },
+      { "href": "#como-ajudamos", "label": "Como Ajudamos" },
+      { "href": "#projetos", "label": "Projetos" },
+      { "href": "#galeria", "label": "Galeria" },
+      { "href": "#cadastro", "label": "Cadastro" }
+    ],
+    "cta": {
+      "href": "#cadastro",
+      "label": "Seja Voluntário"
+    }
+  },
+  "hero": {
+    "badge": "ONG & Produtora Cultural",
+    "title": "Conectamos culturas, transformamos encontros.",
+    "description": "Acolhemos migrantes, refugiados e a comunidade com assistência social e o poder transformador da arte. Aqui, cada história encontra um novo caminho.",
+    "bgImage": "images/hero-fundo.png",
+    "alt": "Grupo diverso de migrantes, refugiados e voluntários sorrindo e se abraçando em um centro comunitário",
+    "buttons": {
+      "primary": {
+        "label": "Conheça os Projetos",
+        "href": "#projetos"
+      },
+      "secondary": {
+        "label": "Preciso de Ajuda",
+        "href": "#cadastro"
+      }
+    }
+  },
+  "services": {
+    "title": "Como podemos ajudar?",
+    "subtitle": "Caminhamos junto de você em cada passo da chegada e do recomeço. Escolha por onde começar.",
+    "items": [
+      {
+        "id": "portugues",
+        "icon": "book-open",
+        "title": "Acesso ao ensino de Português",
+        "description": "Aulas e turmas acolhedoras para você se comunicar com confiança no dia a dia."
+      },
+      {
+        "id": "documentos",
+        "icon": "file-text",
+        "title": "Orientação para emissão de Documentos",
+        "description": "Apoio para regularizar sua situação e ter acesso aos seus direitos."
+      },
+      {
+        "id": "aluguel",
+        "icon": "home",
+        "title": "Como conseguir Aluguel",
+        "description": "Orientação de moradia para encontrar um lar seguro para você e sua família."
+      },
+      {
+        "id": "sus",
+        "icon": "heart-pulse",
+        "title": "Fazer o registro no SUS",
+        "description": "Ajudamos você a acessar o sistema público de saúde e cuidar do que importa."
+      },
+      {
+        "id": "gestantes",
+        "icon": "baby",
+        "title": "Programa de atenção a mulheres grávidas",
+        "description": "Cesta de gestantes e cuidado especial para mães e bebês nesse momento tão importante."
+      },
+      {
+        "id": "trabalho",
+        "icon": "briefcase",
+        "title": "Oportunidades de trabalho e Diárias",
+        "description": "Conexões com vagas e diárias para você recomeçar com dignidade e autonomia."
+      }
+    ]
+  },
+  "impact": {
+    "title": "Impacto & Arte",
+    "subtitle": "A arte é a nossa ponte entre culturas. Conheça um dos projetos que fazem essa magia acontecer.",
+    "featured": {
+      "badge": "Projeto em destaque",
+      "name": "Saboroso Caribe",
+      "description": "Gastronomia caribenha que celebra sabores e memórias, valorizando as PANCs (Plantas Alimentícias Não Convencionais) e a cozinha afetiva.",
+      "lead": "Sob o comando da Chef Damelis Castillo, cada prato é um encontro entre o Caribe e o Brasil.",
+      "chefHighlight": "Chef Damelis Castillo",
+      "image": "images/saboroso-caribe.png",
+      "imageAlt": "Prato da culinária caribenha do projeto Saboroso Caribe",
+      "tag": "Sabores que unem povos"
+    },
+    "stats": [
+      {
+        "target": 1200,
+        "label": "Pessoas Atendidas",
+        "color": "emerald"
+      },
+      {
+        "target": 85,
+        "label": "Ações Culturais",
+        "color": "amber"
+      },
+      {
+        "target": 340,
+        "label": "Voluntários",
+        "color": "yellow"
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Nossa Galeria",
+    "subtitle": "Momentos que contam a nossa história. Cada foto é um encontro, um recomeço, uma conquista.",
+    "photos": [
+      {
+        "src": "images/galeria-aula.png",
+        "alt": "Aula de português para migrantes adultos em sala acolhedora",
+        "caption": "Aulas de Português"
+      },
+      {
+        "src": "images/galeria-arte.png",
+        "alt": "Oficina de arte cultural com pessoas pintando e criando juntas",
+        "caption": "Oficinas de Arte"
+      },
+      {
+        "src": "images/galeria-voluntarios.png",
+        "alt": "Voluntários distribuindo cestas de alimentos para famílias",
+        "caption": "Ação dos Voluntários"
+      }
+    ]
+  },
+  "registration": {
+    "title": "Portal de Registros",
+    "subtitle": "Faça parte da nossa rede de acolhimento. Escolha uma opção abaixo para começar.",
+    "beneficiary": {
+      "tabLabel": "Sou Beneficiário",
+      "buttonLabel": "Solicitar acolhimento",
+      "optionsLabel": "Em que podemos ajudar?",
+      "options": [
+        { "value": "portugues", "label": "Ensino de Português" },
+        { "value": "documentos", "label": "Emissão de Documentos" },
+        { "value": "moradia", "label": "Orientação de moradia / Aluguel" },
+        { "value": "sus", "label": "Registro no SUS" },
+        { "value": "gestantes", "label": "Atenção a gestantes" },
+        { "value": "trabalho", "label": "Trabalho e Diárias" }
+      ]
+    },
+    "volunteer": {
+      "tabLabel": "Quero ser Voluntário",
+      "buttonLabel": "Quero ser voluntário",
+      "optionsLabel": "Área de interesse",
+      "options": [
+        { "value": "ensino", "label": "Aulas e ensino de Português" },
+        { "value": "juridico", "label": "Apoio jurídico e documentos" },
+        { "value": "saude", "label": "Saúde e SUS" },
+        { "value": "cultura", "label": "Ações culturais e arte" },
+        { "value": "gastronomia", "label": "Gastronomia (Saboroso Caribe)" },
+        { "value": "administrativo", "label": "Apoio administrativo" }
+      ]
+    }
+  },
+  "partners": {
+    "title": "Nossos Parceiros",
+    "subtitle": "Realizamos nosso trabalho com o apoio de quem acredita na força da cultura e do acolhimento.",
+    "items": [
+      { "name": "FAC DF", "isFeatured": true },
+      { "name": "Parceiro", "isFeatured": false },
+      { "name": "Parceiro", "isFeatured": false },
+      { "name": "Parceiro", "isFeatured": false }
+    ]
+  },
+  "footer": {
+    "location": "Brasília — DF, Brasil",
+    "email": "contato@guaramoarte.org",
+    "instagram": {
+      "handle": "@guaramoarte",
+      "url": "https://instagram.com/guaramoarte"
+    },
+    "copyright": "Guaramo Arte do Mundo. Feito com carinho e cultura."
+  }
+}

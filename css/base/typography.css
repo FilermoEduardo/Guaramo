@@ -1,0 +1,56 @@
+/* ==========================================================================
+   TYPOGRAPHY & TEXT UTILITIES
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-title);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 5vw + 1rem, 4.25rem);
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3vw + 0.5rem, 2.5rem);
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2vw + 0.25rem, 1.75rem);
+}
+
+p {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.text-highlight-earth {
+  color: var(--color-earth);
+}
+
+.text-highlight-green {
+  color: var(--color-primary);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3rem auto;
+}
+
+.section-header h2 {
+  margin-bottom: 0.85rem;
+}
+
+.section-header p {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+}

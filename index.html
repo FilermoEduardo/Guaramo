@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guaramo Arte do Mundo | Conectamos Culturas, Transformamos Encontros</title>
+  <meta name="description" content="Acolhemos migrantes, refugiados e a comunidade com assistência social e o poder transformador da arte." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/icon.svg" />
+  
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Estilos Modulares (Hub Main CSS) -->
+  <link rel="stylesheet" href="css/main.css" />
+
+  <!-- JavaScript Modular (ES Modules) -->
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+
+  <!-- ========================================================================
+       CABEÇALHO & NAVEGAÇÃO
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <!-- Logotipo -->
+      <a href="#inicio" class="site-logo" aria-label="Guaramo Arte do Mundo - Início">
+        <span class="logo-badge">G</span>
+        <span>Guaramo <span class="logo-highlight">Arte</span></span>
+      </a>
+
+      <!-- Menu Desktop -->
+      <nav aria-label="Navegação principal">
+        <ul id="nav-menu-desktop" class="nav-menu">
+          <!-- Injetado dinamicamente via header.js -->
+        </ul>
+      </nav>
+
+      <!-- Botão de Ação Desktop -->
+      <a href="#cadastro" class="btn-nav-cta desktop-only">Seja Voluntário</a>
+
+      <!-- Botão Hambúrguer Mobile -->
+      <button
+        id="menu-toggle"
+        class="menu-toggle-btn"
+        type="button"
+        aria-label="Abrir menu de navegação"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Painel de Navegação Mobile -->
+    <div id="mobile-nav" class="mobile-nav-panel">
+      <ul id="nav-menu-mobile" class="mobile-nav-links">
+        <!-- Injetado dinamicamente via header.js -->
+      </ul>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       CONTEÚDO PRINCIPAL
+       ======================================================================== -->
+  <main>
+    <!-- SEÇÃO HERO -->
+    <section id="inicio" class="hero-section">
+      <img id="hero-bg-img" class="hero-bg-img" src="images/hero-fundo.png" alt="Acolhimento Guaramo Arte do Mundo" />
+      <div class="hero-overlay-gradient"></div>
+      <div class="hero-overlay-bottom"></div>
+
+      <div class="container">
+        <div class="hero-content">
+          <span id="hero-badge" class="hero-badge">ONG &amp; Produtora Cultural</span>
+          <h1 id="hero-title" class="hero-title">Conectamos culturas, transformamos encontros.</h1>
+          <p id="hero-desc" class="hero-description">
+            Acolhemos migrantes, refugiados e a comunidade com assistência social e o poder transformador da arte. Aqui, cada história encontra um novo caminho.
+          </p>
+          <div class="hero-actions">
+            <a id="hero-btn-primary" href="#projetos" class="btn-primary">Conheça os Projetos</a>
+            <a id="hero-btn-secondary" href="#cadastro" class="btn-secondary-glass">Preciso de Ajuda</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: COMO PODEMOS AJUDAR (SERVIÇOS) -->
+    <section id="como-ajudamos" class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="services-title">Como podemos ajudar?</h2>
+          <p id="services-subtitle">
+            Caminhamos junto de você em cada passo da chegada e do recomeço. Escolha por onde começar.
+          </p>
+        </header>
+
+        <div id="services-grid" class="grid-3">
+          <!-- Cards injetados dinamicamente via services.js a partir de data.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: IMPACTO & ARTE (SABOROSO CARIBE & ESTATÍSTICAS) -->
+    <section id="projetos" class="section section-alt">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="impact-title">Impacto &amp; Arte</h2>
+          <p id="impact-subtitle">
+            A arte é a nossa ponte entre culturas. Conheça um dos projetos que fazem essa magia acontecer.
+          </p>
+        </header>
+
+        <!-- Card do Projeto em Destaque -->
+        <div id="impact-featured" class="featured-project-card grid-2">
+          <!-- Injetado dinamicamente via impact.js -->
+        </div>
+
+        <!-- Grid de Contadores Animados -->
+        <div id="impact-stats" class="grid-3">
+          <!-- Injetado dinamicamente com animação numérica via impact.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: NOSSA GALERIA -->
+    <section id="galeria" class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="gallery-title">Nossa Galeria</h2>
+          <p id="gallery-subtitle">
+            Momentos que contam a nossa história. Cada foto é um encontro, um recomeço, uma conquista.
+          </p>
+        </header>
+
+        <div id="gallery-grid" class="gallery-grid">
+          <!-- Fotos injetadas dinamicamente via gallery.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: PORTAL DE REGISTROS -->
+    <section id="cadastro" class="section section-muted">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="registration-title">Portal de Registros</h2>
+          <p id="registration-subtitle">
+            Faça parte da nossa rede de acolhimento. Escolha uma opção abaixo para começar.
+          </p>
+        </header>
+
+        <div class="registration-container">
+          <!-- Alternador de Abas -->
+          <div class="tab-switcher" role="tablist" aria-label="Tipo de cadastro">
+            <button
+              id="tab-beneficiario"
+              class="tab-btn active"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              aria-controls="form-beneficiario"
+            >
+              Sou Beneficiário
+            </button>
+            <button
+              id="tab-voluntario"
+              class="tab-btn"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="form-voluntario"
+            >
+              Quero ser Voluntário
+            </button>
+          </div>
+
+          <!-- Card com os Formulários -->
+          <div class="registration-form-card">
+            <!-- Formulário: Beneficiário -->
+            <form id="form-beneficiario" class="registration-form" role="tabpanel" aria-labelledby="tab-beneficiario">
+              <div class="form-group">
+                <label for="benef-nome" class="form-label">Nome completo</label>
+                <input id="benef-nome" name="nome" type="text" class="form-input" required placeholder="Seu nome" />
+              </div>
+              <div class="form-group">
+                <label for="benef-email" class="form-label">E-mail</label>
+                <input id="benef-email" name="email" type="email" class="form-input" required placeholder="voce@email.com" />
+              </div>
+              <div class="form-group">
+                <label for="benef-telefone" class="form-label">Telefone</label>
+                <input id="benef-telefone" name="telefone" type="tel" class="form-input" required placeholder="(61) 90000-0000" />
+              </div>
+              <div class="form-group">
+                <label for="benef-ajuda" class="form-label">Em que podemos ajudar?</label>
+                <select id="benef-ajuda" name="area_ajuda" class="form-select" required>
+                  <!-- Opções injetadas via registration.js -->
+                </select>
+              </div>
+              <button type="submit" class="btn-submit">Solicitar acolhimento</button>
+            </form>
+
+            <!-- Formulário: Voluntário -->
+            <form id="form-voluntario" class="registration-form hidden" role="tabpanel" aria-labelledby="tab-voluntario">
+              <div class="form-group">
+                <label for="vol-nome" class="form-label">Nome completo</label>
+                <input id="vol-nome" name="nome" type="text" class="form-input" required placeholder="Seu nome" />
+              </div>
+              <div class="form-group">
+                <label for="vol-email" class="form-label">E-mail</label>
+                <input id="vol-email" name="email" type="email" class="form-input" required placeholder="voce@email.com" />
+              </div>
+              <div class="form-group">
+                <label for="vol-telefone" class="form-label">Telefone</label>
+                <input id="vol-telefone" name="telefone" type="tel" class="form-input" required placeholder="(61) 90000-0000" />
+              </div>
+              <div class="form-group">
+                <label for="vol-interesse" class="form-label">Área de interesse</label>
+                <select id="vol-interesse" name="area_interesse" class="form-select" required>
+                  <!-- Opções injetadas via registration.js -->
+                </select>
+              </div>
+              <button type="submit" class="btn-submit">Quero ser voluntário</button>
+            </form>
+
+            <!-- Mensagem de Feedback -->
+            <div id="registration-feedback" class="form-feedback" role="status" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: NOSSOS PARCEIROS -->
+    <section class="section partners-section">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="partners-title">Nossos Parceiros</h2>
+          <p id="partners-subtitle">
+            Realizamos nosso trabalho com o apoio de quem acredita na força da cultura e do acolhimento.
+          </p>
+        </header>
+
+        <div id="partners-grid" class="partners-grid">
+          <!-- Injetado dinamicamente via partners.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       RODAPÉ
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <!-- Coluna 1: Marca e Missão -->
+      <div class="footer-brand">
+        <div class="site-logo">
+          <span class="logo-badge">G</span>
+          <span>Guaramo Arte do Mundo</span>
+        </div>
+        <p id="footer-desc" class="footer-description">
+          Conectamos culturas, transformamos encontros. Assistência social e arte para acolher quem chega.
+        </p>
+      </div>
+
+      <!-- Coluna 2: Contato -->
+      <div>
+        <h3 class="footer-heading">Contato</h3>
+        <ul class="footer-list">
+          <li id="footer-location">Brasília — DF, Brasil</li>
+          <li>
+            <a id="footer-email" href="mailto:contato@guaramoarte.org">contato@guaramoarte.org</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Coluna 3: Redes Sociais -->
+      <div>
+        <h3 class="footer-heading">Redes</h3>
+        <a id="footer-instagram" href="https://instagram.com/guaramoarte" target="_blank" rel="noopener noreferrer" class="btn-instagram">
+          <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.3 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .3-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.3 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.2.4-.3 1-.4 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.1a4.9 4.9 0 110 9.8 4.9 4.9 0 010-9.8zm0 8.1a3.2 3.2 0 100-6.4 3.2 3.2 0 000 6.4zm6.2-8.3a1.1 1.1 0 11-2.3 0 1.1 1.1 0 012.3 0z" />
+          </svg>
+          <span class="instagram-handle">@guaramoarte</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p id="footer-copyright">© Guaramo Arte do Mundo. Feito com carinho e cultura.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

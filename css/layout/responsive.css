@@ -1,0 +1,68 @@
+/* ==========================================================================
+   LAYOUT: RESPONSIVENESS & BREAKPOINTS
+   ========================================================================== */
+
+/* Tablets & telas médias */
+@media (max-width: 900px) {
+  .nav-menu,
+  .btn-nav-cta.desktop-only {
+    display: none;
+  }
+
+  .menu-toggle-btn {
+    display: inline-flex;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .featured-image-wrapper {
+    min-height: 240px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Telas pequenas (Smartphones) */
+@media (max-width: 640px) {
+  .section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .hero-content {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn-primary,
+  .hero-actions .btn-secondary-glass {
+    width: 100%;
+  }
+
+  .featured-project-card {
+    padding: 1.5rem;
+  }
+
+  .registration-form-card {
+    padding: 1.5rem;
+  }
+
+  .tab-btn {
+    font-size: 0.875rem;
+    padding: 0 0.5rem;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}

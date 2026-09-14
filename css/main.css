@@ -1,0 +1,20 @@
+/* ==========================================================================
+   MAIN CSS ENTRY POINT (BUNDLES ALL MODULAR STYLES)
+   Arquitetura inspirada no projeto portfolio-web e ESTRUTURA_E_CONTEXTO.md
+   ========================================================================== */
+
+@import './base/variables.css';
+@import './base/reset.css';
+@import './base/typography.css';
+@import './layout/container.css';
+
+@import './components/header.css';
+@import './components/hero.css';
+@import './components/services.css';
+@import './components/impact.css';
+@import './components/gallery.css';
+@import './components/registration.css';
+@import './components/partners.css';
+@import './components/footer.css';
+
+@import './layout/responsive.css';

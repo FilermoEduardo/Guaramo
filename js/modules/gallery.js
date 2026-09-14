@@ -1,0 +1,34 @@
+/**
+ * Módulo da Galeria de Fotos
+ */
+
+export function renderGallery(galleryData) {
+  if (!galleryData) return;
+
+  const headerTitle = document.getElementById('gallery-title');
+  const headerSubtitle = document.getElementById('gallery-subtitle');
+  const gridContainer = document.getElementById('gallery-grid');
+
+  if (headerTitle && galleryData.title) {
+    headerTitle.textContent = galleryData.title;
+  }
+
+  if (headerSubtitle && galleryData.subtitle) {
+    headerSubtitle.textContent = galleryData.subtitle;
+  }
+
+  if (gridContainer && Array.isArray(galleryData.photos)) {
+    gridContainer.innerHTML = galleryData.photos
+      .map(
+        (photo) => `
+        <figure class="gallery-card">
+          <img src="${photo.src}" alt="${photo.alt || photo.caption}" loading="lazy" />
+          <figcaption class="gallery-caption">
+            <span>${photo.caption}</span>
+          </figcaption>
+        </figure>
+      `
+      )
+      .join('');
+  }
+}

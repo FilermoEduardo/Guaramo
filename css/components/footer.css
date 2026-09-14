@@ -1,0 +1,88 @@
+/* ==========================================================================
+   COMPONENT: SITE FOOTER
+   ========================================================================== */
+
+.site-footer {
+  background-color: var(--color-primary-dark);
+  color: var(--color-primary-subtle);
+}
+
+.footer-top {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.footer-brand .site-logo {
+  color: var(--color-text-white);
+  margin-bottom: 1rem;
+}
+
+.footer-brand .logo-badge {
+  background-color: var(--color-accent);
+  color: var(--color-accent-text);
+}
+
+.footer-description {
+  color: rgba(209, 250, 229, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 380px;
+}
+
+.footer-heading {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+  color: rgba(209, 250, 229, 0.9);
+}
+
+.footer-list a {
+  transition: color var(--transition-fast);
+}
+
+.footer-list a:hover {
+  color: var(--color-accent);
+}
+
+.btn-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  height: 48px;
+  padding: 0 1.25rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all var(--transition-fast);
+}
+
+.btn-instagram:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn-instagram svg {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.875rem;
+  color: rgba(209, 250, 229, 0.7);
+}
