@@ -36,18 +36,14 @@
   text-decoration: none;
 }
 
-.logo-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.logo-img {
+  display: block;
   width: 42px;
   height: 42px;
   border-radius: var(--radius-full);
-  background-color: var(--color-primary);
-  color: var(--color-accent);
-  font-weight: 900;
-  font-size: 1.35rem;
+  object-fit: cover;
   box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
 }
 
 .site-logo span.logo-highlight {
