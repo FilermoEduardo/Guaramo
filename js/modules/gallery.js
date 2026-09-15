@@ -1,6 +1,7 @@
 /**
  * Módulo da Galeria de Fotos
  */
+import { escapeHtml, escapeAttr } from './utils.js';
 
 export function renderGallery(galleryData) {
   if (!galleryData) return;
@@ -22,9 +23,9 @@ export function renderGallery(galleryData) {
       .map(
         (photo) => `
         <figure class="gallery-card">
-          <img src="${photo.src}" alt="${photo.alt || photo.caption}" loading="lazy" />
+          <img src="${escapeAttr(photo.src)}" alt="${escapeAttr(photo.alt || photo.caption)}" loading="lazy" />
           <figcaption class="gallery-caption">
-            <span>${photo.caption}</span>
+            <span>${escapeHtml(photo.caption)}</span>
           </figcaption>
         </figure>
       `

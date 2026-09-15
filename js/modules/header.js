@@ -1,6 +1,8 @@
 /**
  * Módulo de Controle do Cabeçalho e Navegação
  */
+import { escapeHtml, escapeAttr } from './utils.js';
+
 export function initHeader(navData, orgData) {
   const header = document.querySelector('.site-header');
   const desktopMenu = document.getElementById('nav-menu-desktop');
@@ -23,7 +25,7 @@ export function initHeader(navData, orgData) {
       .map(
         (link) => `
         <li>
-          <a href="${link.href}" class="nav-link">${link.label}</a>
+          <a href="${escapeAttr(link.href)}" class="nav-link">${escapeHtml(link.label)}</a>
         </li>
       `
       )
@@ -36,7 +38,7 @@ export function initHeader(navData, orgData) {
       .map(
         (link) => `
         <li>
-          <a href="${link.href}" class="nav-link mobile-link">${link.label}</a>
+          <a href="${escapeAttr(link.href)}" class="nav-link mobile-link">${escapeHtml(link.label)}</a>
         </li>
       `
       )
@@ -45,7 +47,7 @@ export function initHeader(navData, orgData) {
     const ctaHtml = navData.cta
       ? `
         <li style="padding-top: 0.5rem;">
-          <a href="${navData.cta.href}" class="btn-nav-cta mobile-link" style="display: flex;">${navData.cta.label}</a>
+          <a href="${escapeAttr(navData.cta.href)}" class="btn-nav-cta mobile-link" style="display: flex;">${escapeHtml(navData.cta.label)}</a>
         </li>
       `
       : '';
@@ -73,6 +75,14 @@ export function initHeader(navData, orgData) {
     // Fechar ao clicar em qualquer link
     mobileNavPanel.querySelectorAll('.mobile-link').forEach((link) => {
       link.addEventListener('click', () => toggleMenu(false));
+    });
+
+    // Fechar com Esc e devolver o foco ao botão de menu (acessibilidade via teclado)
+    mobileNavPanel.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isOpen) {
+        toggleMenu(false);
+        menuToggleBtn.focus();
+      }
     });
   }
 }

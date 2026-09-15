@@ -1,6 +1,7 @@
 /**
  * Módulo de Impacto & Arte: Projeto em Destaque e Contadores Animados
  */
+import { escapeHtml, escapeAttr } from './utils.js';
 
 export function renderImpact(impactData) {
   if (!impactData) return;
@@ -23,15 +24,15 @@ export function renderImpact(impactData) {
     const f = impactData.featured;
     featuredContainer.innerHTML = `
       <div>
-        <span class="featured-badge">${f.badge}</span>
-        <h3 class="featured-title">${f.name}</h3>
-        <p class="featured-text">${f.description}</p>
+        <span class="featured-badge">${escapeHtml(f.badge)}</span>
+        <h3 class="featured-title">${escapeHtml(f.name)}</h3>
+        <p class="featured-text">${escapeHtml(f.description)}</p>
         <p class="featured-lead">
-          Sob o comando da <span class="highlight">${f.chefHighlight || 'Chef Damelis Castillo'}</span>, cada prato é um encontro entre o Caribe e o Brasil.
+          Sob o comando da <span class="highlight">${escapeHtml(f.chefHighlight || 'Chef Damelis Castillo')}</span>, cada prato é um encontro entre o Caribe e o Brasil.
         </p>
       </div>
       <div class="featured-image-wrapper">
-        <img src="${f.image}" alt="${f.imageAlt || f.name}" loading="lazy" />
+        <img src="${escapeAttr(f.image)}" alt="${escapeAttr(f.imageAlt || f.name)}" loading="lazy" />
         <div class="featured-image-caption">
           <div class="caption-tag-box">
             <div class="caption-icon-circle" aria-hidden="true">
@@ -42,7 +43,7 @@ export function renderImpact(impactData) {
                 <path d="m19 5-7 7"/>
               </svg>
             </div>
-            <p class="caption-text">${f.tag || 'Sabores que unem povos'}</p>
+            <p class="caption-text">${escapeHtml(f.tag || 'Sabores que unem povos')}</p>
           </div>
         </div>
       </div>
@@ -54,9 +55,9 @@ export function renderImpact(impactData) {
     statsContainer.innerHTML = impactData.stats
       .map(
         (stat) => `
-        <div class="stat-card" data-target="${stat.target}">
-          <div class="stat-number color-${stat.color || 'emerald'}">0+</div>
-          <p class="stat-label">${stat.label}</p>
+        <div class="stat-card" data-target="${escapeAttr(stat.target)}">
+          <div class="stat-number color-${escapeAttr(stat.color || 'emerald')}">0+</div>
+          <p class="stat-label">${escapeHtml(stat.label)}</p>
         </div>
       `
       )

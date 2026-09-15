@@ -1,6 +1,7 @@
 /**
  * Módulo de Serviços: Como Podemos Ajudar
  */
+import { escapeHtml } from './utils.js';
 
 // Mapeamento de ícones SVG sem dependência de bibliotecas externas
 const iconSvgs = {
@@ -36,8 +37,8 @@ export function renderServices(servicesData) {
             <div class="service-icon-box" aria-hidden="true">
               ${iconSvg}
             </div>
-            <h3 class="service-card-title">${item.title}</h3>
-            <p class="service-card-desc">${item.description}</p>
+            <h3 class="service-card-title">${escapeHtml(item.title)}</h3>
+            <p class="service-card-desc">${escapeHtml(item.description)}</p>
           </article>
         `;
       })
