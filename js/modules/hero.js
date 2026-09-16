@@ -13,7 +13,7 @@ export function renderHero(heroData) {
 
   if (bgImg && heroData.bgImage) {
     bgImg.src = heroData.bgImage;
-    bgImg.alt = heroData.alt || 'Guaramo Arte do Mundo';
+    bgImg.alt = heroData.alt || 'Guaramo Arte';
   }
 
   if (badge && heroData.badge) {

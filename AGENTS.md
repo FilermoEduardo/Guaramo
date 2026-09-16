@@ -3,7 +3,7 @@
 Este arquivo contém as diretrizes para assistentes de IA ao trabalharem neste repositório.
 
 ## 📄 Contexto Principal
-Por favor, consulte o arquivo [`CONTEXT.md`](./CONTEXT.md) para entender a visão geral, a arquitetura desacoplada e a estrutura de pastas do projeto Guaramo Arte do Mundo.
+Por favor, consulte o arquivo [`CONTEXT.md`](./CONTEXT.md) para entender a visão geral, a arquitetura desacoplada e a estrutura de pastas do projeto Guaramo Arte.
 
 ## 🛠️ Diretrizes de Desenvolvimento
 1. **Idioma das Respostas:** Sempre responda ao usuário em Português do Brasil (pt-BR).

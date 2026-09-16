@@ -1,6 +1,7 @@
 /**
  * Módulo de Parceiros e Apoiadores
  */
+import { escapeHtml } from './utils.js';
 
 export function renderPartners(partnersData) {
   if (!partnersData) return;
@@ -22,7 +23,7 @@ export function renderPartners(partnersData) {
       .map(
         (partner) => `
         <div class="partner-card ${partner.isFeatured ? 'featured' : ''}">
-          ${partner.name}
+          ${escapeHtml(partner.name)}
         </div>
       `
       )

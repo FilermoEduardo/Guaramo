@@ -1,7 +1,7 @@
-# Documento de Contexto do Projeto: Guaramo Arte do Mundo
+# Documento de Contexto do Projeto: Guaramo Arte
 
 ## 1. Visão Geral do Projeto
-Desenvolvimento da plataforma web para a ONG e produtora cultural **Guaramo Arte do Mundo**. O objetivo do site é ser a porta de entrada digital da organização, conectando cultura, arte e assistência social. A plataforma serve para apresentar os serviços de acolhimento oferecidos, divulgar projetos culturais e, principalmente, atuar como um sistema de captação e registro estruturado de beneficiários, voluntários e parceiros.
+Desenvolvimento da plataforma web para a ONG e produtora cultural **Guaramo Arte**. O objetivo do site é ser a porta de entrada digital da organização, conectando cultura, arte e assistência social. A plataforma serve para apresentar os serviços de acolhimento oferecidos, divulgar projetos culturais e, principalmente, atuar como um sistema de captação e registro estruturado de beneficiários, voluntários e parceiros.
 
 ---
 

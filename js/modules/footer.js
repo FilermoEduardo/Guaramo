@@ -34,6 +34,6 @@ export function renderFooter(footerData, orgData) {
 
   if (copyEl) {
     const currentYear = new Date().getFullYear();
-    copyEl.textContent = `© ${currentYear} ${footerData.copyright || 'Guaramo Arte do Mundo.'}`;
+    copyEl.textContent = `© ${currentYear} ${footerData.copyright || 'Guaramo Arte.'}`;
   }
 }

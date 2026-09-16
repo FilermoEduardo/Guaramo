@@ -1,6 +1,6 @@
 /**
  * ==========================================================================
- * GUARAMO ARTE DO MUNDO - MAIN JAVASCRIPT ENTRYPOINT (ES MODULES)
+ * GUARAMO ARTE - MAIN JAVASCRIPT ENTRYPOINT (ES MODULES)
  * Arquitetura orientada a dados, desacoplada e 100% nativa (Vanilla JS)
  * ==========================================================================
  */
@@ -30,8 +30,37 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderPartners(data.partners);
     renderFooter(data.footer, data.organization);
 
-    console.log('✅ Guaramo Arte do Mundo inicializado com sucesso via ES Modules e data.json!');
+    console.log('✅ Guaramo Arte inicializado com sucesso via ES Modules e data.json!');
   } catch (error) {
     console.error('❌ Falha ao inicializar o portal Guaramo:', error);
+    showFatalErrorBanner();
   }
 });
+
+/**
+ * Exibe um aviso visível quando o carregamento inicial dos dados falha
+ * (hoje via data.json, futuramente via API). Sem isso, a página fica
+ * em branco sem nenhuma explicação para quem está visitando o site.
+ */
+function showFatalErrorBanner() {
+  const banner = document.createElement('div');
+  banner.setAttribute('role', 'alert');
+  banner.style.cssText = [
+    'position: fixed',
+    'top: 0',
+    'left: 0',
+    'right: 0',
+    'z-index: 9999',
+    'background-color: #fef2f2',
+    'color: #991b1b',
+    'border-bottom: 1px solid #fecaca',
+    'padding: 1rem 1.5rem',
+    'text-align: center',
+    'font-family: Inter, system-ui, sans-serif',
+    'font-size: 0.95rem',
+  ].join(';');
+  banner.textContent =
+    'Não foi possível carregar o conteúdo do site agora. Tente recarregar a página em instantes.';
+
+  document.body.prepend(banner);
+}

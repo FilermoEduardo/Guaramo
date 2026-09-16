@@ -1,6 +1,7 @@
 /**
  * Módulo do Portal de Registros: Alternância de Abas e Envio
  */
+import { escapeHtml, escapeAttr } from './utils.js';
 
 export function initRegistration(regData) {
   if (!regData) return;
@@ -23,7 +24,7 @@ export function initRegistration(regData) {
     selectAjuda.innerHTML = `
       <option value="" disabled selected>Selecione uma área</option>
       ${regData.beneficiary.options
-        .map((opt) => `<option value="${opt.value}">${opt.label}</option>`)
+        .map((opt) => `<option value="${escapeAttr(opt.value)}">${escapeHtml(opt.label)}</option>`)
         .join('')}
     `;
   }
@@ -33,7 +34,7 @@ export function initRegistration(regData) {
     selectInteresse.innerHTML = `
       <option value="" disabled selected>Selecione uma área</option>
       ${regData.volunteer.options
-        .map((opt) => `<option value="${opt.value}">${opt.label}</option>`)
+        .map((opt) => `<option value="${escapeAttr(opt.value)}">${escapeHtml(opt.label)}</option>`)
         .join('')}
     `;
   }
@@ -70,25 +71,63 @@ export function initRegistration(regData) {
 
   // 4. Tratamento de Envio dos Formulários (com feedback visual e pronto para API Flask)
   const handleFormSubmit = (form, tipo) => {
-    form?.addEventListener('submit', (e) => {
+    form?.addEventListener('submit', async (e) => {
       e.preventDefault();
+
+      const submitBtn = form.querySelector('.btn-submit');
+      const originalBtnText = submitBtn?.textContent;
 
       const formData = new FormData(form);
       const dataObj = Object.fromEntries(formData.entries());
       dataObj.tipo_cadastro = tipo;
 
-      console.log(`📝 [${tipo.toUpperCase()}] Dados registrados:`, dataObj);
-
-      // Feedback amigável para o usuário
+      // Estado de carregamento: evita múltiplos envios enquanto aguarda resposta
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Enviando...';
+      }
       if (feedbackEl) {
-        feedbackEl.className = 'form-feedback success';
-        feedbackEl.innerHTML = `
-          <strong>Agradecemos seu contato!</strong><br />
-          Recebemos seus dados com muito carinho. Em breve a equipe do Guaramo entrará em contato.
-        `;
+        feedbackEl.className = 'form-feedback';
+        feedbackEl.textContent = '';
       }
 
-      form.reset();
+      try {
+        // TODO(Fase 3 do roadmap): trocar pelo fetch real assim que a API Flask existir, ex:
+        //   const response = await fetch('/api/cadastro', {
+        //     method: 'POST',
+        //     headers: { 'Content-Type': 'application/json' },
+        //     body: JSON.stringify(dataObj),
+        //   });
+        //   if (!response.ok) throw new Error('Falha ao enviar cadastro');
+        console.log(`📝 [${tipo.toUpperCase()}] Dados registrados:`, dataObj);
+
+        // Feedback amigável de sucesso
+        if (feedbackEl) {
+          feedbackEl.className = 'form-feedback success';
+          feedbackEl.innerHTML = `
+            <strong>Agradecemos seu contato!</strong><br />
+            Recebemos seus dados com muito carinho. Em breve a equipe do Guaramo entrará em contato.
+          `;
+        }
+
+        form.reset();
+      } catch (error) {
+        console.error(`Falha ao enviar formulário de ${tipo}:`, error);
+
+        // Feedback visível de erro (rede/validação), para o usuário não ficar sem retorno
+        if (feedbackEl) {
+          feedbackEl.className = 'form-feedback error';
+          feedbackEl.innerHTML = `
+            <strong>Não foi possível enviar seus dados.</strong><br />
+            Verifique sua conexão e tente novamente em instantes.
+          `;
+        }
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalBtnText;
+        }
+      }
     });
   };
 
