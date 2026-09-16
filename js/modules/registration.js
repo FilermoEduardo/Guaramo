@@ -2,6 +2,7 @@
  * Módulo do Portal de Registros: Alternância de Abas e Envio
  */
 import { escapeHtml, escapeAttr } from './utils.js';
+import { supabase } from './supabaseClient.js';
 
 export function initRegistration(regData) {
   if (!regData) return;
@@ -69,7 +70,7 @@ export function initRegistration(regData) {
   btnBeneficiario?.addEventListener('click', () => switchTab('beneficiario'));
   btnVoluntario?.addEventListener('click', () => switchTab('voluntario'));
 
-  // 4. Tratamento de Envio dos Formulários (com feedback visual e pronto para API Flask)
+  // 4. Tratamento de Envio dos Formulários (Conectado ao Supabase com RLS e Proteção Anti-Spam)
   const handleFormSubmit = (form, tipo) => {
     form?.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -79,9 +80,15 @@ export function initRegistration(regData) {
 
       const formData = new FormData(form);
       const dataObj = Object.fromEntries(formData.entries());
-      dataObj.tipo_cadastro = tipo;
 
-      // Estado de carregamento: evita múltiplos envios enquanto aguarda resposta
+      // 4.1 Proteção contra bots: se o honeypot estiver preenchido, aborta silenciosamente
+      if (dataObj.website_hp) {
+        console.warn('⚠️ Envio bloqueado: atividade suspeita de bot detectada.');
+        form.reset();
+        return;
+      }
+
+      // 4.2 Estado de carregamento no botão
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Enviando...';
@@ -92,14 +99,34 @@ export function initRegistration(regData) {
       }
 
       try {
-        // TODO(Fase 3 do roadmap): trocar pelo fetch real assim que a API Flask existir, ex:
-        //   const response = await fetch('/api/cadastro', {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify(dataObj),
-        //   });
-        //   if (!response.ok) throw new Error('Falha ao enviar cadastro');
-        console.log(`📝 [${tipo.toUpperCase()}] Dados registrados:`, dataObj);
+        // 4.3 Mapeamento de tabela e payload limpo
+        const isBeneficiario = tipo === 'beneficiario';
+        const tabela = isBeneficiario ? 'beneficiarios' : 'colaboradores';
+
+        const payload = isBeneficiario
+          ? {
+              nome: (dataObj.nome || '').trim(),
+              email: (dataObj.email || '').trim().toLowerCase(),
+              telefone: (dataObj.telefone || '').trim(),
+              area_ajuda: dataObj.area_ajuda,
+              status_atendimento: 'novo'
+            }
+          : {
+              nome: (dataObj.nome || '').trim(),
+              email: (dataObj.email || '').trim().toLowerCase(),
+              telefone: (dataObj.telefone || '').trim(),
+              area_interesse: dataObj.area_interesse,
+              status: 'pendente'
+            };
+
+        // 4.4 Inserção direta e segura no Supabase (respeitando as regras RLS)
+        const { error } = await supabase.from(tabela).insert([payload]);
+
+        if (error) {
+          throw error;
+        }
+
+        console.log(`✅ [${tipo.toUpperCase()}] Cadastro salvo com sucesso no Supabase!`);
 
         // Feedback amigável de sucesso
         if (feedbackEl) {
@@ -112,14 +139,14 @@ export function initRegistration(regData) {
 
         form.reset();
       } catch (error) {
-        console.error(`Falha ao enviar formulário de ${tipo}:`, error);
+        console.error(`❌ Falha ao enviar formulário de ${tipo} para o Supabase:`, error);
 
-        // Feedback visível de erro (rede/validação), para o usuário não ficar sem retorno
+        // Feedback visível de erro
         if (feedbackEl) {
           feedbackEl.className = 'form-feedback error';
           feedbackEl.innerHTML = `
-            <strong>Não foi possível enviar seus dados.</strong><br />
-            Verifique sua conexão e tente novamente em instantes.
+            <strong>Não foi possível enviar seus dados no momento.</strong><br />
+            Por favor, verifique os campos ou tente novamente em alguns instantes.
           `;
         }
       } finally {

@@ -184,6 +184,12 @@
           <div class="registration-form-card">
             <!-- Formulário: Beneficiário -->
             <form id="form-beneficiario" class="registration-form" role="tabpanel" aria-labelledby="tab-beneficiario">
+              <!-- Campo Anti-Spam oculto para bots (Honeypot) -->
+              <div style="display: none !important;" aria-hidden="true">
+                <label for="benef-hp">Não preencha este campo</label>
+                <input id="benef-hp" name="website_hp" type="text" tabindex="-1" autocomplete="off" />
+              </div>
+
               <div class="form-group">
                 <label for="benef-nome" class="form-label">Nome completo</label>
                 <input id="benef-nome" name="nome" type="text" class="form-input" required placeholder="Seu nome" />
@@ -202,11 +208,23 @@
                   <!-- Opções injetadas via registration.js -->
                 </select>
               </div>
+              <div class="form-group form-checkbox-group">
+                <label class="form-checkbox-label">
+                  <input type="checkbox" name="consentimento" required class="form-checkbox" />
+                  <span>Autorizo o contato da equipe da Guaramo Arte exclusivamente para acolhimento e suporte social.</span>
+                </label>
+              </div>
               <button type="submit" class="btn-submit">Solicitar acolhimento</button>
             </form>
 
             <!-- Formulário: Voluntário -->
             <form id="form-voluntario" class="registration-form hidden" role="tabpanel" aria-labelledby="tab-voluntario">
+              <!-- Campo Anti-Spam oculto para bots (Honeypot) -->
+              <div style="display: none !important;" aria-hidden="true">
+                <label for="vol-hp">Não preencha este campo</label>
+                <input id="vol-hp" name="website_hp" type="text" tabindex="-1" autocomplete="off" />
+              </div>
+
               <div class="form-group">
                 <label for="vol-nome" class="form-label">Nome completo</label>
                 <input id="vol-nome" name="nome" type="text" class="form-input" required placeholder="Seu nome" />
@@ -224,6 +242,12 @@
                 <select id="vol-interesse" name="area_interesse" class="form-select" required>
                   <!-- Opções injetadas via registration.js -->
                 </select>
+              </div>
+              <div class="form-group form-checkbox-group">
+                <label class="form-checkbox-label">
+                  <input type="checkbox" name="consentimento" required class="form-checkbox" />
+                  <span>Autorizo o contato da equipe da Guaramo Arte para alinhamento das atividades voluntárias.</span>
+                </label>
               </div>
               <button type="submit" class="btn-submit">Quero ser voluntário</button>
             </form>
