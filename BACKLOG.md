@@ -157,11 +157,13 @@ A plataforma Guaramo utiliza Vanilla JS com ES Modules nativos (sem necessidade 
 
 | Tarefa | Responsável | Status |
 | :--- | :--- | :--- |
-| Modelagem SQL & Criação das Tabelas | Supabase | ⏳ Pendente de execução |
-| Configuração de Políticas RLS | Supabase | ⏳ No script SQL |
-| Cliente Supabase no Frontend (`supabaseClient.js`) | Frontend | ⏳ Pronto para criar |
-| Conexão do Formulário de Cadastro (`registration.js`) | Frontend | ⏳ Pronto para integrar |
-| Otimização de Imagens (WebP) | Frontend | ⏳ Pendente |
+| Modelagem SQL & Criação das Tabelas | Supabase | ✅ Concluído |
+| Configuração de Políticas RLS | Supabase | ✅ Concluído |
+| Cliente Supabase no Frontend (`supabaseClient.js`) | Frontend | ✅ Concluído |
+| Conexão do Formulário de Cadastro (`registration.js`) | Frontend | ✅ Concluído |
+| Campos LGPD e Anti-Spam Honeypot (`index.html`) | Frontend | ✅ Concluído |
+| Otimização de Imagens (WebP) | Frontend | ⏳ Próximo passo |
+| Metatags de Compartilhamento Social (Open Graph) | Frontend | ⏳ Próximo passo |
 | Publicação & Deploy em Produção | DevOps / Hosting | ⏳ Fase final |
 
 ---
