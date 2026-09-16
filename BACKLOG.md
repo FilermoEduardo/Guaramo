@@ -1,4 +1,4 @@
-# Backlog Técnico — Guaramo Arte do Mundo
+# Backlog Técnico — Guaramo Arte
 
 > Baseado na revisão de código de 14/09/2026 (index.html, data.json, css/, js/). Considera que o projeto vai evoluir para ter banco de dados (Fase 2/3 do roadmap: Supabase + API Flask).
 

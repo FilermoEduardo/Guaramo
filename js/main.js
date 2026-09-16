@@ -1,6 +1,6 @@
 /**
  * ==========================================================================
- * GUARAMO ARTE DO MUNDO - MAIN JAVASCRIPT ENTRYPOINT (ES MODULES)
+ * GUARAMO ARTE - MAIN JAVASCRIPT ENTRYPOINT (ES MODULES)
  * Arquitetura orientada a dados, desacoplada e 100% nativa (Vanilla JS)
  * ==========================================================================
  */
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderPartners(data.partners);
     renderFooter(data.footer, data.organization);
 
-    console.log('✅ Guaramo Arte do Mundo inicializado com sucesso via ES Modules e data.json!');
+    console.log('✅ Guaramo Arte inicializado com sucesso via ES Modules e data.json!');
   } catch (error) {
     console.error('❌ Falha ao inicializar o portal Guaramo:', error);
     showFatalErrorBanner();
