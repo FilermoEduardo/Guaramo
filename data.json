@@ -115,23 +115,18 @@
     "subtitle": "Momentos que contam a nossa história. Cada foto é um encontro, um recomeço, uma conquista.",
     "photos": [
       {
-        "src": "images/galeria-aula.png",
-        "alt": "Aula de português para migrantes adultos em sala acolhedora",
-        "caption": "Aulas de Português"
-      },
-      {
         "src": "images/galeria-arte.png",
-        "alt": "Oficina de arte cultural com pessoas criando juntas",
+        "alt": "Oficina de arte cultural com pessoas criando juntas em atelier acolhedor",
         "caption": "Oficinas de Arte"
       },
       {
-        "src": "images/Captura de tela 2026-09-16 213158.png",
-        "alt": "Prato caribenho autêntico com cogumelos e pimentas pelo projeto Saboroso Caribe",
+        "src": "images/galeria-gastronomia.png",
+        "alt": "Prato autêntico da culinária caribenha com arroz aromático, cogumelos frescos e PANCs",
         "caption": "Gastronomia Caribenha & PANCs"
       },
       {
-        "src": "images/Captura de tela 2026-09-16 220949.png",
-        "alt": "Encontro comunitário ao ar livre com música tradicional, maracás e integração multicultural",
+        "src": "images/galeria-vivencia.png",
+        "alt": "Encontro comunitário ao ar livre com maracás de madeira, cantos tradicionais e integração intercultural",
         "caption": "Vivências Culturais"
       }
     ]
