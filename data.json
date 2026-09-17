@@ -5,7 +5,7 @@
     "highlight": "Arte",
     "initial": "G",
     "slogan": "Conectamos culturas, transformamos encontros.",
-    "description": "Acolhemos migrantes, refugiados e a comunidade com assistência social e o poder transformador da arte. Aqui, cada história encontra um novo caminho."
+    "description": "Orientamos migrantes, refugiados e a comunidade com assistência social e o poder transformador da arte. Aqui, cada história encontra um novo caminho."
   },
   "navigation": {
     "links": [
@@ -21,9 +21,9 @@
     }
   },
   "hero": {
-    "badge": "ONG & Produtora Cultural",
+    "badge": "Guaramo",
     "title": "Conectamos culturas, transformamos encontros.",
-    "description": "Acolhemos migrantes, refugiados e a comunidade com assistência social e o poder transformador da arte. Aqui, cada história encontra um novo caminho.",
+    "description": "Orientamos migrantes, refugiados e a comunidade com assistência social e o poder transformador da arte. Aqui, cada história encontra um novo caminho.",
     "bgImage": "images/hero-fundo.png",
     "alt": "Grupo diverso de migrantes, refugiados e voluntários sorrindo e se abraçando em um centro comunitário",
     "buttons": {
@@ -44,7 +44,7 @@
       {
         "id": "portugues",
         "icon": "book-open",
-        "title": "Acesso ao ensino de Português",
+        "title": "Acesso ao Português",
         "description": "Aulas e turmas acolhedoras para você se comunicar com confiança no dia a dia."
       },
       {
@@ -68,8 +68,8 @@
       {
         "id": "gestantes",
         "icon": "baby",
-        "title": "Programa de atenção a mulheres grávidas",
-        "description": "Cesta de gestantes e cuidado especial para mães e bebês nesse momento tão importante."
+        "title": "Apoio e Acolhimento a Gestantes",
+        "description": "Rede de apoio, orientações e cuidado para mães e bebês nesse momento especial."
       },
       {
         "id": "trabalho",
@@ -115,19 +115,19 @@
     "subtitle": "Momentos que contam a nossa história. Cada foto é um encontro, um recomeço, uma conquista.",
     "photos": [
       {
-        "src": "images/galeria-aula.png",
-        "alt": "Aula de português para migrantes adultos em sala acolhedora",
-        "caption": "Aulas de Português"
-      },
-      {
         "src": "images/galeria-arte.png",
-        "alt": "Oficina de arte cultural com pessoas pintando e criando juntas",
+        "alt": "Oficina de arte cultural com pessoas criando juntas em atelier acolhedor",
         "caption": "Oficinas de Arte"
       },
       {
-        "src": "images/galeria-voluntarios.png",
-        "alt": "Voluntários distribuindo cestas de alimentos para famílias",
-        "caption": "Ação dos Voluntários"
+        "src": "images/galeria-gastronomia.png",
+        "alt": "Prato autêntico da culinária caribenha com arroz aromático, cogumelos frescos e PANCs",
+        "caption": "Gastronomia Caribenha & PANCs"
+      },
+      {
+        "src": "images/galeria-vivencia.png",
+        "alt": "Encontro comunitário ao ar livre com maracás de madeira, cantos tradicionais e integração intercultural",
+        "caption": "Vivências Culturais"
       }
     ]
   },
@@ -143,7 +143,7 @@
         { "value": "documentos", "label": "Emissão de Documentos" },
         { "value": "moradia", "label": "Orientação de moradia / Aluguel" },
         { "value": "sus", "label": "Registro no SUS" },
-        { "value": "gestantes", "label": "Atenção a gestantes" },
+        { "value": "gestantes", "label": "Apoio a gestantes" },
         { "value": "trabalho", "label": "Trabalho e Diárias" }
       ]
     },
@@ -154,9 +154,9 @@
       "options": [
         { "value": "ensino", "label": "Aulas e ensino de Português" },
         { "value": "juridico", "label": "Apoio jurídico e documentos" },
-        { "value": "saude", "label": "Saúde e SUS" },
+        { "value": "saude", "label": "Saúde" },
         { "value": "cultura", "label": "Ações culturais e arte" },
-        { "value": "gastronomia", "label": "Gastronomia (Saboroso Caribe)" },
+        { "value": "gastronomia", "label": "Gastronomia" },
         { "value": "administrativo", "label": "Apoio administrativo" }
       ]
     }
