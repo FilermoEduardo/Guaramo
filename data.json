@@ -5,7 +5,7 @@
     "highlight": "Arte",
     "initial": "G",
     "slogan": "Conectamos culturas, transformamos encontros.",
-    "description": "Acolhemos migrantes, refugiados e a comunidade com assistência social e o poder transformador da arte. Aqui, cada história encontra um novo caminho."
+    "description": "Orientamos migrantes, refugiados e a comunidade com assistência social e o poder transformador da arte. Aqui, cada história encontra um novo caminho."
   },
   "navigation": {
     "links": [
@@ -21,9 +21,9 @@
     }
   },
   "hero": {
-    "badge": "ONG & Produtora Cultural",
+    "badge": "Guaramo",
     "title": "Conectamos culturas, transformamos encontros.",
-    "description": "Acolhemos migrantes, refugiados e a comunidade com assistência social e o poder transformador da arte. Aqui, cada história encontra um novo caminho.",
+    "description": "Orientamos migrantes, refugiados e a comunidade com assistência social e o poder transformador da arte. Aqui, cada história encontra um novo caminho.",
     "bgImage": "images/hero-fundo.png",
     "alt": "Grupo diverso de migrantes, refugiados e voluntários sorrindo e se abraçando em um centro comunitário",
     "buttons": {
@@ -44,7 +44,7 @@
       {
         "id": "portugues",
         "icon": "book-open",
-        "title": "Acesso ao ensino de Português",
+        "title": "Acesso ao Português",
         "description": "Aulas e turmas acolhedoras para você se comunicar com confiança no dia a dia."
       },
       {
@@ -68,8 +68,8 @@
       {
         "id": "gestantes",
         "icon": "baby",
-        "title": "Programa de atenção a mulheres grávidas",
-        "description": "Cesta de gestantes e cuidado especial para mães e bebês nesse momento tão importante."
+        "title": "Apoio e Acolhimento a Gestantes",
+        "description": "Rede de apoio, orientações e cuidado para mães e bebês nesse momento especial."
       },
       {
         "id": "trabalho",
@@ -143,7 +143,7 @@
         { "value": "documentos", "label": "Emissão de Documentos" },
         { "value": "moradia", "label": "Orientação de moradia / Aluguel" },
         { "value": "sus", "label": "Registro no SUS" },
-        { "value": "gestantes", "label": "Atenção a gestantes" },
+        { "value": "gestantes", "label": "Apoio a gestantes" },
         { "value": "trabalho", "label": "Trabalho e Diárias" }
       ]
     },
