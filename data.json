@@ -121,13 +121,18 @@
       },
       {
         "src": "images/galeria-arte.png",
-        "alt": "Oficina de arte cultural com pessoas pintando e criando juntas",
+        "alt": "Oficina de arte cultural com pessoas criando juntas",
         "caption": "Oficinas de Arte"
       },
       {
-        "src": "images/galeria-voluntarios.png",
-        "alt": "Voluntários distribuindo cestas de alimentos para famílias",
-        "caption": "Ação dos Voluntários"
+        "src": "images/Captura de tela 2026-09-16 213158.png",
+        "alt": "Prato caribenho autêntico com cogumelos e pimentas pelo projeto Saboroso Caribe",
+        "caption": "Gastronomia Caribenha & PANCs"
+      },
+      {
+        "src": "images/Captura de tela 2026-09-16 220949.png",
+        "alt": "Encontro comunitário ao ar livre com música tradicional, maracás e integração multicultural",
+        "caption": "Vivências Culturais"
       }
     ]
   },
