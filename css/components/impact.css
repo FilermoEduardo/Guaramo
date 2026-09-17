@@ -70,13 +70,13 @@
 }
 
 .featured-image-caption {
-  position: relative;
+  position: absolute;
+  inset: 0;
   z-index: 2;
-  min-height: 260px;
   display: flex;
   align-items: flex-end;
   padding: 1.5rem;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 60%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.35) 45%, transparent 75%);
 }
 
 .caption-tag-box {
