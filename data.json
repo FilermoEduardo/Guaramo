@@ -154,9 +154,9 @@
       "options": [
         { "value": "ensino", "label": "Aulas e ensino de Português" },
         { "value": "juridico", "label": "Apoio jurídico e documentos" },
-        { "value": "saude", "label": "Saúde e SUS" },
+        { "value": "saude", "label": "Saúde" },
         { "value": "cultura", "label": "Ações culturais e arte" },
-        { "value": "gastronomia", "label": "Gastronomia (Saboroso Caribe)" },
+        { "value": "gastronomia", "label": "Gastronomia" },
         { "value": "administrativo", "label": "Apoio administrativo" }
       ]
     }
